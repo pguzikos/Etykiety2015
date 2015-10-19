@@ -25,12 +25,14 @@ namespace Etykiety
 
         private void buttonAnuluj_Click(object sender, EventArgs e)
         {
+            textBoxIlosc.Text = String.Empty;
             this.Close();
         }
 
         private void buttonOK_Click(object sender, EventArgs e)
         {
             int.TryParse(textBoxIlosc.Text, out _ilosc);
+            textBoxIlosc.Text = String.Empty;
             this.Close();
 
         }
