@@ -23,37 +23,6 @@ namespace Etykiety.Properties {
             }
         }
         
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute(@"DECLARE @nrPrzewodnika int=1505000370
-SELECT distinct
-	 ISNULL(ORI.CustomText,'') 'Zamówienie sprzedaży'
-	,ORH.OHNum 'Numer zlecenia'
-	,PRH.PrNum 'Numer przewodnika'
-	,ITI.ItemNum 'Kod elementu wiodacego'
-	,ITI.Shortname 'Nazwa elementu wiodącego'
-	--,ITIS.ItemNum 'Kod elementu'
-	--,ITIS.Shortname 'Nazwa elementu'
-FROM ssk.ORHeads ORH --Nagłówek zlecenia produkcyjnego
-JOIN ssk.ORItems ORI ON ORI.ORHeads_ID=ORH.Rid --Pozycje zlecenia produkcyjnego
-JOIN ssk.ITItems ITI ON ORI.Items_Id=ITI.Rid --Elementy, surowce
-JOIN ssk.ORBom ORB ON ORB.ORItems_Id=ORI.Rid --Specyfikacja zlecenia (specyfikacja pozycji zamówienia)
-JOIN ssk.ORBomAmount ORBA ON ORBA.ORBom_Id=ORB.Rid --Ilości w specyfikacji i sposób realizacji
-JOIN ssk.ORBomProd ORBP ON ORBP.ORBomAmount_Id=ORBA.Rid --Relacje ORBOMAmount - PRHead
-JOIN ssk.PRHeads PRH ON PRH.Rid=ORBP.PRHeads_Id--Przewodniki warsztatowe 
-JOIN ssk.PRHeadsOperations PRHO ON PRHO.PRHeads_id=PRH.Rid --Planowane operacje
---JOIN ssk.ITItems ITIS ON PRH.ITItems_Id=ITIS.Rid --Elementy, surowce
-WHERE PRH.PrNum = @nrPrzewodnika
-")]
-        public string Zapytanie {
-            get {
-                return ((string)(this["Zapytanie"]));
-            }
-            set {
-                this["Zapytanie"] = value;
-            }
-        }
-        
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
