@@ -26,7 +26,8 @@ namespace Etykiety.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=metrix-sql;Initial Catalog=Monaco_Metrix;Integrated Security=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=metrix-sql;Initial Catalog=Monaco_Metrix;Integrated Security=True;Con" +
+            "nect Timeout=2")]
         public string Monaco_MetrixConnectionString {
             get {
                 return ((string)(this["Monaco_MetrixConnectionString"]));
@@ -36,7 +37,8 @@ namespace Etykiety.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=METRIX-SQL;Initial Catalog=CDNXL_METRIXM;Integrated Security=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=METRIX-SQL;Initial Catalog=CDNXL_METRIXM;Integrated Security=True;Con" +
+            "nect Timeout=2")]
         public string CDNXL_METRIXMConnectionString {
             get {
                 return ((string)(this["CDNXL_METRIXMConnectionString"]));
