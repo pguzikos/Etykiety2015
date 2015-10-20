@@ -43,9 +43,9 @@
             // 
             // buttonOK
             // 
-            this.buttonOK.Location = new System.Drawing.Point(33, 58);
+            this.buttonOK.Location = new System.Drawing.Point(31, 49);
             this.buttonOK.Name = "buttonOK";
-            this.buttonOK.Size = new System.Drawing.Size(75, 23);
+            this.buttonOK.Size = new System.Drawing.Size(66, 32);
             this.buttonOK.TabIndex = 1;
             this.buttonOK.Text = "Drukuj";
             this.buttonOK.UseVisualStyleBackColor = true;
@@ -53,9 +53,10 @@
             // 
             // buttonAnuluj
             // 
-            this.buttonAnuluj.Location = new System.Drawing.Point(163, 58);
+            this.buttonAnuluj.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.buttonAnuluj.Location = new System.Drawing.Point(153, 49);
             this.buttonAnuluj.Name = "buttonAnuluj";
-            this.buttonAnuluj.Size = new System.Drawing.Size(75, 23);
+            this.buttonAnuluj.Size = new System.Drawing.Size(66, 32);
             this.buttonAnuluj.TabIndex = 2;
             this.buttonAnuluj.Text = "Anuluj";
             this.buttonAnuluj.UseVisualStyleBackColor = true;
@@ -67,7 +68,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.buttonAnuluj;
-            this.ClientSize = new System.Drawing.Size(284, 107);
+            this.ClientSize = new System.Drawing.Size(284, 88);
             this.Controls.Add(this.buttonAnuluj);
             this.Controls.Add(this.buttonOK);
             this.Controls.Add(this.textBoxIlosc);
